@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James Singian — Revenue, Community & Career</title>
+  <meta name="description" content="Strategic partner and super-connector driving business outcomes and impacting people at the community and personal level." />
+  <meta property="og:title" content="James Singian" />
+  <meta property="og:description" content="Strategic partner and super-connector driving business outcomes, community growth, and career transformation in the Bay Area." />
+  <meta property="og:image" content="images/og-preview.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #f7f5f0;
+      --ink: #1a1a1a;
+      --rule: rgba(10,10,10,0.1);
+      --serif: 'Playfair Display', Georgia, serif;
+      --italic: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Barlow', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 3rem;
+      background: var(--white);
+      border-bottom: 0.5px solid var(--rule);
+    }
+    .nav-logo {
+      font-family: var(--serif); font-size: 1rem;
+      font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--black); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--ink); text-decoration: none; opacity: 0.5; transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+
+    /* HERO */
+    .hero {
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 100vh; padding-top: 68px;
+    }
+    .hero-text {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 4rem 5rem 3rem;
+      border-right: 0.5px solid var(--rule);
+    }
+    .hero-eyebrow {
+      font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+      opacity: 0.6; margin-bottom: 1.75rem;
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 5.5vw, 5.5rem);
+      font-weight: 900; line-height: 0.92; letter-spacing: -0.02em; margin-bottom: 1.75rem;
+    }
+    .hero-name em { font-style: italic; font-weight: 700; }
+    .hero-tagline {
+      font-family: var(--italic); font-size: clamp(1rem, 1.6vw, 1.25rem);
+      font-style: italic; font-weight: 300; line-height: 1.65;
+      opacity: 0.82; max-width: 400px; margin-bottom: 2.5rem;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; }
+    .tag {
+      font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+      border: 0.5px solid rgba(10,10,10,0.18); padding: 0.4rem 0.9rem;
+      color: var(--ink); opacity: 0.8;
+    }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--white); background: var(--black);
+      padding: 1rem 2rem; text-decoration: none; width: fit-content; transition: opacity 0.2s;
+    }
+    .hero-cta:hover { opacity: 0.75; }
+    .hero-photo {
+      position: relative; overflow: hidden; background: #1e1e1e;
+    }
+    .hero-photo img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center top;
+      display: block; opacity: 0.9;
+    }
+    .hero-photo-placeholder {
+      width: 100%; height: 100%; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 0.75rem;
+    }
+    .hero-photo-placeholder p {
+      font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.22); text-align: center; line-height: 2;
+    }
+    .hero-photo-caption {
+      position: absolute; bottom: 2rem; right: 1.5rem;
+      font-size: 0.55rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: #fff; opacity: 0.65;
+    }
+
+    /* SHARED */
+    section { padding: 5.5rem 3rem; }
+    .section-rule { width: 100%; border-top: 0.5px solid var(--rule); margin-bottom: 2.5rem; }
+    .section-label {
+      font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase;
+      opacity: 0.55; margin-bottom: 0.4rem;
+    }
+    .section-heading {
+      font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 3rem;
+    }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; }
+    .about-stats { display: flex; flex-direction: column; gap: 2.25rem; }
+    .stat-number {
+      font-family: var(--serif); font-size: 2.75rem; font-weight: 900;
+      line-height: 1; display: block; letter-spacing: -0.02em;
+    }
+    .stat-label { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.62; }
+    .about-bio p {
+      font-family: var(--italic); font-size: 1.08rem; font-weight: 300;
+      font-style: italic; line-height: 1.82; opacity: 0.9;
+    }
+    .about-bio p + p { margin-top: 1.5rem; }
+    .about-bio strong { font-style: normal; font-weight: 400; color: var(--black); opacity: 1; }
+
+    /* PHOTO STRIP */
+    .photo-strip {
+      padding: 0; display: grid; grid-template-columns: 2fr 1fr 1fr;
+      height: 60vh; min-height: 300px;
+      border-top: 0.5px solid var(--rule); border-bottom: 0.5px solid var(--rule);
+    }
+    .photo-item { position: relative; overflow: hidden; background: #141414; }
+    .photo-item + .photo-item { border-left: 0.5px solid var(--rule); }
+    .photo-item img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center;
+      display: block; filter: grayscale(15%); transition: filter 0.5s, transform 0.6s;
+    }
+    .photo-item:hover img { filter: grayscale(0%); transform: scale(1.03); }
+    .photo-placeholder {
+      width: 100%; height: 100%; display: flex; align-items: center;
+      justify-content: center;
+    }
+    .photo-placeholder p {
+      font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.18); text-align: center; line-height: 2;
+    }
+    .photo-label {
+      position: absolute; bottom: 1.5rem; left: 1.5rem;
+      font-size: 0.55rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: #fff; opacity: 0.9;
+    }
+    .photo-badge {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      font-size: 0.52rem; letter-spacing: 0.16em; text-transform: uppercase;
+      color: #fff; border: 0.5px solid rgba(255,255,255,0.4); padding: 0.3rem 0.65rem;
+    }
+
+    /* PILLARS */
+    .pillar {
+      display: grid; grid-template-columns: 56px 1fr;
+      border-top: 0.5px solid var(--rule); padding: 3rem 0;
+    }
+    .pillar:last-child { border-bottom: 0.5px solid var(--rule); }
+    .pillar-num {
+      font-family: var(--serif); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.1em; opacity: 0.18; padding-top: 0.4rem;
+    }
+    .pillar-inner { display: grid; grid-template-columns: 1fr 1.65fr; gap: 3.5rem; align-items: start; }
+    .pillar-label {
+      font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase;
+      opacity: 0.55; margin-bottom: 0.85rem; display: block;
+    }
+    .pillar-title {
+      font-family: var(--serif); font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 900; line-height: 0.95; letter-spacing: -0.02em;
+    }
+    .pillar-title em { font-style: italic; font-weight: 700; }
+    .pillar-desc {
+      font-family: var(--italic); font-size: 1.05rem; font-style: italic;
+      font-weight: 300; line-height: 1.78; opacity: 0.88; margin-bottom: 1.75rem;
+    }
+    .pillar-audience { margin-bottom: 1.25rem; }
+    .pillar-audience-label {
+      font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+      opacity: 0.6; display: block; margin-bottom: 0.35rem;
+    }
+    .pillar-audience p { font-size: 0.82rem; line-height: 1.65; opacity: 0.75; }
+
+    /* TESTIMONIALS */
+    .testimonials { background: var(--black); color: #f0ede6; }
+    .testimonials .section-rule { border-top-color: rgba(255,255,255,0.1); }
+    .testimonials .section-label { color: #f0ede6; opacity: 0.25; }
+    .testimonials .section-heading { color: #f0ede6; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3rem; }
+    .testi-mark {
+      font-family: var(--serif); font-size: 3.5rem; line-height: 0.8;
+      opacity: 0.14; margin-bottom: 1rem; display: block;
+    }
+    .testi-quote {
+      font-family: var(--italic); font-size: 0.98rem; font-style: italic;
+      font-weight: 300; line-height: 1.78; opacity: 0.88; margin-bottom: 1.5rem;
+    }
+    .testi-name {
+      font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: #f0ede6; opacity: 0.72; display: block; margin-bottom: 0.2rem;
+    }
+    .testi-role {
+      font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+      opacity: 0.55; color: #f0ede6;
+    }
+
+    /* CONTACT */
+    .contact-inner { max-width: 600px; }
+    .contact-tagline {
+      font-family: var(--italic); font-size: 1.1rem; font-style: italic;
+      font-weight: 300; opacity: 0.78; max-width: 480px; margin-bottom: 2.5rem; line-height: 1.72;
+    }
+    .contact-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .contact-link {
+      font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--ink); text-decoration: none;
+      border-bottom: 0.5px solid rgba(10,10,10,0.22);
+      padding-bottom: 0.25rem; transition: opacity 0.2s;
+    }
+    .contact-link:hover { opacity: 0.4; }
+
+    /* FOOTER */
+    footer {
+      padding: 1.75rem 3rem; border-top: 0.5px solid var(--rule);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.28;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-text { padding: 3rem 1.5rem; }
+      .hero-photo { height: 65vw; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-stats { flex-direction: row; flex-wrap: wrap; gap: 1.5rem; }
+      .photo-strip { grid-template-columns: 1fr; height: auto; }
+      .photo-item { height: 56vw; }
+      .photo-item + .photo-item { border-left: none; border-top: 0.5px solid var(--rule); }
+      .pillar { grid-template-columns: 36px 1fr; }
+      .pillar-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+      .testi-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      section { padding: 4rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#" class="nav-logo">James Singian</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#moments">Moments</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#voices">Voices</a></li>
+      <li><a href="#contact">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="padding:0;padding-top:68px;">
+    <div class="hero-text">
+      <h1 class="hero-name">James<br><em>Singian</em></h1>
+      <p class="hero-tagline">
+        Strategic partner and super-connector — driving business outcomes, growing communities, and unlocking careers that don't follow the script.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">GTM &amp; Revenue Strategist</span>
+        <span class="tag">Community Builder</span>
+        <span class="tag">Career Coach</span>
+      </div>
+      <a href="#contact" class="hero-cta">Let's connect →</a>
+    </div>
+    <div class="hero-photo">
+      <img src="images/hero.jpg" alt="James Singian speaking at sfBIG How Brands Win in Culture event" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;" />
+      <span class="hero-photo-caption">San Francisco, CA</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-rule"></div>
+    <p class="section-label">About</p>
+    <div class="about-grid">
+      <div class="about-stats">
+        <div>
+          <span class="stat-number">$24M+</span>
+          <span class="stat-label">Career revenue generated</span>
+        </div>
+        <div>
+          <span class="stat-number">150%</span>
+          <span class="stat-label">Peak quota attainment</span>
+        </div>
+        <div>
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Signature events led, sfBIG</span>
+        </div>
+        <div>
+          <span class="stat-number">2</span>
+          <span class="stat-label">Communities built &amp; growing</span>
+        </div>
+      </div>
+      <div class="about-bio">
+        <p>
+          James Singian is a San Francisco-based revenue leader, community architect, and career coach operating at the intersection of <strong>media, technology, and human connection</strong>. He has spent his career turning relationships into results — closing enterprise deals at the Wall Street Journal, Axios, and TechnologyAdvice while building the kind of trust that compounds long after the contract is signed.
+        </p>
+        <p>
+          He serves as VP of Content &amp; Events on the executive board of <strong>sfBIG</strong>, the Bay Area's leading advertising community, and is a founding member and growth advisor at <strong>Continusum</strong> — a Bay Area collective connecting early-stage founders, creatives, and investors to move arts and culture forward through IRL experiences.
+        </p>
+        <p>
+          Off the sales floor, James coaches professionals who are ready to stop following the linear path and start building something that actually fits — with frameworks, community, and a clear plan to move.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO STRIP -->
+  <div class="photo-strip" id="moments">
+    <div class="photo-item">
+      <img src="images/panel.jpg" alt="James Singian moderating a panel" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;" />
+      <span class="photo-label">sfBIG — Thought Leadership Event</span>
+    </div>
+    <div class="photo-item">
+      <img src="images/award.jpg" alt="James Singian receiving Most Creative and Collaborative Partner award from JUST Global" style="width:100%;height:100%;object-fit:cover;object-position:55% 30%;display:block;" />
+      <span class="photo-label">Most Creative &amp; Collaborative Partner</span>
+      <span class="photo-badge">Honoree</span>
+    </div>
+    <div class="photo-item">
+      <img src="images/community.jpg" alt="sfBIG Pride 2025 rooftop event, San Francisco skyline" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;" />
+      <span class="photo-label">Continusum — Bay Area</span>
+    </div>
+  </div>
+
+  <!-- THREE PILLARS -->
+  <section id="work">
+    <div class="section-rule"></div>
+    <p class="section-label">What I do</p>
+
+    <div class="pillar">
+      <div class="pillar-num">I</div>
+      <div class="pillar-inner">
+        <div>
+          <span class="pillar-label">Revenue &amp; Partnerships</span>
+          <div class="pillar-title">Deals that<br><em>compound.</em></div>
+        </div>
+        <div>
+          <p class="pillar-desc">
+            I don't just close — I architect partnerships that grow over time. From generating $3.3M at Axios and ranking Top 2 Client Partner at the Wall Street Journal for two consecutive years, to building $3M+ in qualified pipeline at TechnologyAdvice through AI-driven outbound strategies, I bring consultative depth and relentless stakeholder management to every engagement. My edge is trust: built at every level of an organization, and translated into revenue that renews.
+          </p>
+          <div class="pillar-audience">
+            <span class="pillar-audience-label">For recruiters</span>
+            <p>$24M+ across WSJ, Axios, and TechnologyAdvice. Consistent attainment of 110–150%. Sold the first-ever VC firm event roadshow partnership at Axios. Grew West Coast B2B agency investments by 60% at WSJ. Recognized as Most Creative &amp; Collaborative Individual Partner by a leading B2B agency community.</p>
+          </div>
+          <div class="pillar-audience">
+            <span class="pillar-audience-label">For brand &amp; partnership leads</span>
+            <p>I build integrated go-to-market strategies spanning display, podcast, video, custom content, paid social, and live events. If you're looking for a strategic partner who can open doors and deliver — let's talk.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-num">II</div>
+      <div class="pillar-inner">
+        <div>
+          <span class="pillar-label">Community Building</span>
+          <div class="pillar-title">Rooms where<br>people<br><em>belong.</em></div>
+        </div>
+        <div>
+          <p class="pillar-desc">
+            The most durable asset in any industry isn't a product or a pipeline — it's a community that shows up. As VP of Content &amp; Events on the sfBIG executive board, I lead a team of seven curating signature thought leadership events for the Bay Area advertising world, driving 5% new member growth and 10% sponsorship revenue growth year-over-year. Through Continusum, I'm building something new: a collective connecting Bay Area founders, creatives, artists, and investors to move culture forward through IRL experiences and genuine human connection.
+          </p>
+          <div class="pillar-audience">
+            <span class="pillar-audience-label">For community organizers &amp; collaborators</span>
+            <p>I'm always open to co-events, cross-community partnerships, and putting the right people in the same room. Reach out — let's build.</p>
+          </div>
+          <div class="pillar-audience">
+            <span class="pillar-audience-label">For recruiters</span>
+            <p>Community leadership isn't a side project — it's how I think about culture-building, long-term investment in people, and brand beyond the transaction. That translates directly into how I manage accounts and develop teams.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar-num">III</div>
+      <div class="pillar-inner">
+        <div>
+          <span class="pillar-label">Career Coaching</span>
+          <div class="pillar-title">Your non-<br>linear path<br><em>is the edge.</em></div>
+        </div>
+        <div>
+          <p class="pillar-desc">
+            The professionals I work with were told there was one path — climb the ladder, follow the script, wait your turn. Then the layoffs hit, the industry shifted, and the ladder moved. I coach people who are ready to stop chasing someone else's straight line and start building a career that's actually theirs. Through 1:1 sessions, I deliver practical frameworks for intentional networking — IRL and digital — tools for the modern job market, and a concrete monthly and weekly plan that creates momentum even when the market feels impossible.
+          </p>
+          <div class="pillar-audience">
+            <span class="pillar-audience-label">For prospective clients</span>
+            <p>If you're navigating a pivot, rising above a layoff, or ready to turn your community into your competitive advantage — I have limited 1:1 spots available. Reach out directly.</p>
+          </div>
+          <div class="pillar-audience">
+            <span class="pillar-audience-label">For recruiters</span>
+            <p>Coaching reflects my core value: investing in people. It's the same instinct that makes me a strong mentor, a collaborative partner, and a leader who builds teams that want to stay.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="voices">
+    <div class="section-rule"></div>
+    <p class="section-label">Voices</p>
+    <h2 class="section-heading">What people say.</h2>
+    <div class="testi-grid">
+
+      <div>
+        <span class="testi-mark">"</span>
+        <p class="testi-quote">James has always struck me as a strategic thinker and a remarkably hard worker. He can build relationships at all levels within an org — from his early days as a media associate on our team through to the impactful programs we ran together for our tech clients with him at WSJ. He's full of energy and highly personable. It's been a pleasure to watch him make such an impact on the Bay Area advertising community and with clients over the years.</p>
+        <span class="testi-name">Brandon Friesen</span>
+        <span class="testi-role">CEO · JUST Global</span>
+      </div>
+
+      <div>
+        <span class="testi-mark">"</span>
+        <p class="testi-quote">I hired James at Axios and loved having him on my team — I really miss working with him. He is extremely tenacious and industrious, always looking for ways to connect with clients and proposing smart ways to work together. He's warm, charming, and had a great work ethic. Clients loved him — even the tough ones. He's a star, and I highly recommend him.</p>
+        <span class="testi-name">Ann-Marie Taylor</span>
+        <span class="testi-role">Former Manager · Axios</span>
+      </div>
+
+      <div>
+        <span class="testi-mark">"</span>
+        <p class="testi-quote">In just one conversation, James reignited my passion for the fundamentals that shaped my early career. He reminded me of the power of intentional networking, provided a clear framework for thinking about strategy, and opened doors to resources I hadn't yet discovered. What makes James truly exceptional is his generosity with his time.</p>
+        <span class="testi-name">Bri Urquiza</span>
+        <span class="testi-role">Ticket Operations Coordinator · Golden State Warriors</span>
+      </div>
+
+      <div>
+        <span class="testi-mark">"</span>
+        <p class="testi-quote">Despite his busy schedule, James carved out time to share incredibly helpful pro tips for marketing, strategic partnerships, and professional development that I'm already putting to use. It's rare to find someone who combines real expertise with such authentic kindness — he's the kind of person who makes everyone around him better.</p>
+        <span class="testi-name">Javier Solis</span>
+        <span class="testi-role">Strategic Communications &amp; Digital Marketing</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-rule"></div>
+    <p class="section-label">Connect</p>
+    <div class="contact-inner">
+      <h2 class="section-heading">Let's build something<br>that matters.</h2>
+      <p class="contact-tagline">
+        Available for strategic partnerships, keynotes, community collaborations, and 1:1 career coaching. If you're building something real in the Bay Area — or beyond — I want to hear about it.
+      </p>
+      <div class="contact-links">
+        <a href="/cdn-cgi/l/email-protection#c0b3a9aea7a9a1aeeeaaa280a7ada1a9aceea3afad" class="contact-link">Email James</a>
+        <a href="https://www.linkedin.com/in/jamessingian/" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 20
